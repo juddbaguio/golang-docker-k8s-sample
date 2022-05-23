@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: users-service
+spec:
+  selector:
+    app: users-app
+  ports:
+  - port: 80
+    targetPort: 3000
+    protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: riders-service
+spec:
+  selector:
+    app: riders-app
+  ports:
+  - port: 80
+    targetPort: 3000
+    protocol: TCP
+
